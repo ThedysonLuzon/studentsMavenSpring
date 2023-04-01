@@ -25,13 +25,13 @@
         </tr>
         </thead>
         <tbody>
-        <tr th:each="program:${programs}">
-            <th scope="row" th:text="${program.programCode}">1</th>
+        <tr th:each="program:${programs}" th:object="${program}"}>
+            <th scope="row" th:text="${program.programCode}"></th>
             <td th:text="${program.programName}"></td>
             <td th:text="${program.duration}"></td>
             <td th:text="${program.fee}"></td>
 
-            <td><a>Pick</a></td>
+            <td><a href="/checkout">Pick</a></td>
 
         </tr>
         </tbody>
