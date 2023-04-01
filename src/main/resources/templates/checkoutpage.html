@@ -12,24 +12,24 @@
   <br>
   <form th:action="@{/paymentsuccess}">
     <div class="mb-3">
-      <label for="cardDetails" class="form-label">Email address</label>
-      <input type="number" class="form-control" id="cardDetails" aria-describedby="cardHelp">
+      <label for="cardDetails" class="form-label">Card Number</label>
+      <input type="number" class="form-control" id="cardDetails" aria-describedby="cardHelp" required>
       <div id="cardHelp" class="form-text">We'll never share your details with anyone else.</div>
     </div>
     <div class="mb-3">
       <label for="cvv" class="form-label">CVV</label>
-      <input type="number" class="form-control" id="cvv">
+      <input type="number" class="form-control" id="cvv" required>
     </div>
     <div class="mb-3">
       <label for="cardName" class="form-label">Name on Card</label>
-      <input type="text" class="form-control" id="cardName">
+      <input type="text" class="form-control" id="cardName" required>
     </div>
     <div class="mb-3">
       <label for="expiry" class="form-label">Expiry Date</label>
-      <input type="text" class="form-control" id="expiry">
+      <input type="text" class="form-control" id="expiry" required>
     </div>
     <div class="mb-3 form-check">
-      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
       <label class="form-check-label" for="exampleCheck1">I am not a bot</label>
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
