@@ -23,8 +23,10 @@
       <th scope="col">Address</th>
       <th scope="col">City</th>
       <th scope="col">Postal Code</th>
-      <th scope="col">Delete Employee</th>
-      <th scope="col">Update Employee</th>
+      <th scope="col">Delete Student</th>
+      <th scope="col">Update Student</th>
+      <th scope="col">Login Student</th>
+
     </tr>
     </thead>
     <tbody>
@@ -39,6 +41,8 @@
       <td th:text="${student.postalCode}"></td>
       <td><a th:href="@{/delete/{id}(id=${student.id})}">Delete</a></td>
       <td><a th:href="@{/update/{id}(id=${student.id})}">Update</a></td>
+      <td><a href="/programs">Login</a></td>
+
     </tr>
     </tbody>
   </table>

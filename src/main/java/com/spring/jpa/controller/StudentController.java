@@ -29,9 +29,12 @@ public class StudentController {
     @PostMapping("/add")
     public String insertStudentData(@Valid Student student, BindingResult bindingResult, Model model){
 
+        if (bindingResult.hasErrors()) {
+            return "add-student";
+        }
         studentRepository.save(student);
         model.addAttribute("students", studentRepository.findAll());
-        return "index";
+        return "success";
     }
 
     @GetMapping("/delete/{id}")
